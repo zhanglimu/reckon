@@ -192,14 +192,14 @@
 								"homeName":"贝内文托",
 								"awayName":"热那亚",
 								"play":"1",
-								"achievement":"0",
+								"achievement":"1",
 								"matchState":"完",
 							},
 							{
 								"homeName":"拉古纳",
 								"awayName":"托卢卡",
 								"play":"2",
-								"achievement":"1",
+								"achievement":"0",
 								"matchState":"未",
 							}
 						];
@@ -210,18 +210,19 @@
 					var html="";
 					$('.a').empty();
 					for (var i = 0; i < dataObj.length; i++) {
-						html +='<table class\="sigerd\">'+'<tbody>'+'<tr class="lists">';
+						html +='<table class\="sigerd\"><tbody><tr class="lists">';
 						html +='<td>'+dataObj[i].homeName+'</td>';
-						html +='<td>'+'VS'+'</td>';
-						html +='<td>'+dataObj[i].awayName+'</td>'+'</tr>';
+						html +='<td>VS</td>';
+						html +='<td>'+dataObj[i].awayName+'</td></tr>';
 
-						dataObj[i].play==0?	html +='<tr class\="she\">'+'<td>'+'<button style="background:#fe3c3c;color:#fff;">'+'胜'+'</button>'+'</td>'
-						:	html +='<tr class\="she\">'+'<td>'+'<button>'+'胜'+'</button>'+'</td>';
+						dataObj[i].play==0?	html +='<tr class\="she\"><td><button style="background:#fe3c3c;color:#fff;">胜</button></td>'
+						:	html +='<tr class\="she\"><td><button>胜</button></td>';
 						dataObj[i].play==1?	html +='<td>'+'<button style="background:#fe3c3c;color:#fff;">'+'平'+'</button>'+'</td>'
 						:	html +='<td>'+'<button>'+'平'+'</button>'+'</td>';
-						dataObj[i].play ==2?html +='<td>'+'<button style="background:#fe3c3c;color:#fff;">'+'负'+'</button>'+'</td>'+'</tr>'
-						:html +='<td>'+'<button>'+'负'+'</button>'+'</td>'+'</tr>';
-						// dataObj[i].achievement ==0?html+='赢':html+='负';
+						dataObj[i].play==2?html +='<td><button style="background:#fe3c3c;color:#fff;">负</button></td>'
+						:	html +='<td><button>负</button></td>';
+						dataObj[i].achievement==0?html+='<td><b class\="hong\">赢</b></td>'
+						:	html+='<td><b class\="lan\">负</b></td></tr>';	
 						html +='</tbody>'+'</table>';
 						
 					}
@@ -229,10 +230,10 @@
 				}
 			}
 			demo(json,function(){})
-			setInterval(function(){
-				echart();
-				demo(json,function(){})
-			},30000);
+			// setInterval(function(){
+			// 	echart();
+			// 	demo(json,function(){})
+			// },30000);
 			function replaceDoc(){
 				window.location.reload()
 			}

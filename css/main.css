@@ -48,14 +48,15 @@ i{color:#fe3c3c;}
   border-radius: 2px;
   padding: 5px 20px;
 }
-/* .she td .sheng{
-  border:none;
-  background:#fe3c3c;
-  color:#fff;
-  border-radius: 2px;
-  padding: 5px 20px;
-} */
+.she td b.hong{
+border: 2px dashed;
+color: #fe3c3c;
+border-radius: 10px;
+padding: 2px;}
 
-
-
+.she td b.lan{
+  border: 2px dashed;
+  color: #169bd5;
+  border-radius: 10px;
+  padding: 2px;}
 
